@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaPipe Hands Demo Antony</title>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <style>
+    body { display: flex; flex-direction: column; align-items: center; }
+    video, canvas { width: 640px; height: 480px; border: 1px solid black; }
+  </style>
+</head>
+<body>
+
+<h2>MediaPipe Hands Demo Antony</h2>
+<video id="video" autoplay muted style="display:none;"></video>
+<canvas id="canvas"></canvas>
+
+<!-- Link to external JS -->
+<script src="hands_demo.js"></script>
+<h2>Cat Detector with MobileNet</h2>
+
+<!-- File input to choose an image -->
+<input type="file" id="fileInput" accept="image/*">
+<br><br>
+<!-- Image element to display selected file -->
+<img id="img" width="300" />
+
+<!-- Results -->
+<div id="results"></div>
+
+</body>
+</html>
